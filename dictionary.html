@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ведьмак - Словарь</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dictionary.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Логотип">
+        </div>
+        <nav>
+            <ul>
+                <p><h1>Ведьмак</h1></p>
+                    <p>
+                    <li><a href="description.html">Описание</a></li>
+                    <li><a href="dictionary.html" class="active">Словарь</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="test.html">Тест</a></li>
+                    <li><a href="profile.html">Личный кабинет</a></li>
+                    </p>  
+                </ul>
+        </nav>
+        <div class="user">
+            <span id="userLogin"></span>
+            <button id="logout">Выйти</button>
+        </div>
+    </header>
+
+    <main>
+        <h2>Словарь</h2>
+        <input type="text" id="search" placeholder="Поиск по словарю">
+        <ul id="dictionaryList">
+            <li data-description="Главный герой серии игр, ведьмак, который охотится на чудовищ за вознаграждение.">Геральт из Ривии</li>
+            <li data-description="Наследница древней крови, обладающая магическими способностями и ключевая фигура сюжета.">Цири</li>
+            <li data-description="Серебряный меч ведьмака, предназначенный для борьбы с магическими и нечеловеческими существами.">Коэн</li>
+            <li data-description="Одно из ведьмачьих братств, в котором учился Геральт. Их символ — волчья голова.">Школа Волка</li>
+            <li data-description="Магические способности ведьмаков.">Искусство Знаков</li>
+            <li data-description="Карточная игра, популярная в мире «Ведьмака», доступная и как отдельная игра.">Гвинт</li>
+            <li data-description="Защитный знак, который временно создаёт магический щит вокруг ведьмака.">Квен</li>
+            <li data-description="Чародейка и возлюбленная Геральта, обладающая мощными магическими способностями.">Йеннифэр из Венгерберга</li>
+            <li data-description="Группа мистических рыцарей, преследующих Цири ради её магической силы.">Дикая Охота</li>
+            <li data-description="Крепость ведьмаков, место их обучения и убежище.">Каэр Морхен</li>
+        </ul>
+        <div id="description"></div>
+    </main>
+
+    <footer>
+        <p>Контакты: <a href="#">Телефон</a> | <a href="#">Facebook</a>
+        <p>&copy; 2024 Ведьмак. Все права защищены.</p>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/dictionary.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>
