@@ -27,20 +27,23 @@
     </header>
 
     <main>
-        <form id="authForm">
+        <form id="authForm" novalidate>
             <h2>Авторизация</h2>
             <label for="login">Логин (4-10 символов, русские буквы и цифры)</label>
-            <input type="text" id="login" name="login" pattern="[А-Яа-я0-9]{4,10}" required>
+            <input type="text" id="login" name="login" required>
+        
             <label for="birthdate">Дата рождения</label>
             <input type="date" id="birthdate" name="birthdate" min="1950-01-01" max="2023-10-01" required>
+        
             <label for="gender">Пол</label>
             <select id="gender" name="gender" required>
                 <option value="">Выберите пол</option>
                 <option value="male">Мужской</option>
                 <option value="female">Женский</option>
             </select>
+        
             <button type="submit">Войти</button>
-            <p id="error" class="error"></p>
+            <p id="error" class="error"></p> <!-- Элемент для вывода ошибок -->
         </form>
     </main>
 
