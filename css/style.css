@@ -9,28 +9,54 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-}
-
-header .logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    position: relative;
 }
 
-header .logo img {
-    width: 500px;
+.logo {
+    text-align: center;
+    margin-right: 200px;
+}
+
+.logo img {
+    width: 300px;
     height: auto;
-    margin-right: 10px;
 }
 
-header h1 {
+.logo h1 {
     margin: 0;
     font-size: 24px;
+}
+
+.user {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user span {
+    font-size: 18px;
+}
+
+.user button {
+    padding: 5px 10px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.user button:hover {
+    background-color: #777;
 }
 
 nav ul {
@@ -39,11 +65,11 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    gap: 20px;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
 }
 
 nav ul li a {

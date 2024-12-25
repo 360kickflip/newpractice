@@ -35,9 +35,8 @@ const testForm = document.getElementById('testForm');
 const checkAnswersButton = document.getElementById('checkAnswers');
 const restartTestButton = document.getElementById('restartTest');
 
-// Генерация вопросов
 function generateQuestions() {
-    testForm.innerHTML = ''; // Очищаем форму перед генерацией
+    testForm.innerHTML = '';
     questions.forEach((q, index) => {
         const questionDiv = document.createElement('div');
         questionDiv.innerHTML = `<p>${index + 1}. ${q.question}</p>`;
@@ -54,7 +53,6 @@ function generateQuestions() {
 
 generateQuestions();
 
-// Проверка ответов
 checkAnswersButton.addEventListener('click', () => {
     let score = 0;
     questions.forEach((q, index) => {
@@ -83,25 +81,20 @@ checkAnswersButton.addEventListener('click', () => {
 
     document.getElementById('result').textContent = `Ваш результат: ${score} из ${questions.length}`;
 
-    // Сохраняем результат теста в localStorage
     localStorage.setItem('testScore', score);
 
-    // Делаем кнопку "Проверить ответы" неактивной
     checkAnswersButton.disabled = true;
     checkAnswersButton.style.backgroundColor = "#777";
     checkAnswersButton.style.cursor = "not-allowed";
 
-    // Показываем кнопку для перезапуска теста
     restartTestButton.style.display = 'block';
 });
 
-// Перезапуск теста
 restartTestButton.addEventListener('click', () => {
     generateQuestions();
     document.getElementById('result').textContent = '';
     restartTestButton.style.display = 'none';
 
-    // Делаем кнопку "Проверить ответы" активной
     checkAnswersButton.disabled = false;
     checkAnswersButton.style.backgroundColor = "#333";
     checkAnswersButton.style.cursor = "pointer";

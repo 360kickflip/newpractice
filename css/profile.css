@@ -61,3 +61,17 @@ h2 {
 .test-result button:hover {
     background-color: #555;
 }
+
+#logoutProfile {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#logoutProfile:hover {
+    background-color: #555;
+}
