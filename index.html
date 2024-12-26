@@ -29,21 +29,27 @@
     <main>
         <form id="authForm" novalidate>
             <h2>Авторизация</h2>
+        
+            <!-- Поле логина -->
             <label for="login">Логин (4-10 символов, русские буквы и цифры)</label>
             <input type="text" id="login" name="login" required>
+            <p id="loginError" class="error"></p> <!-- Ошибка для логина -->
         
+            <!-- Поле даты рождения -->
             <label for="birthdate">Дата рождения</label>
             <input type="date" id="birthdate" name="birthdate" min="1950-01-01" max="2023-10-01" required>
+            <p id="birthdateError" class="error"></p> <!-- Ошибка для даты рождения -->
         
+            <!-- Поле выбора пола -->
             <label for="gender">Пол</label>
             <select id="gender" name="gender" required>
                 <option value="">Выберите пол</option>
                 <option value="male">Мужской</option>
                 <option value="female">Женский</option>
             </select>
+            <p id="genderError" class="error"></p> <!-- Ошибка для пола -->
         
             <button type="submit">Войти</button>
-            <p id="error" class="error"></p>
         </form>
     </main>
 
